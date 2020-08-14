@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#fff" />
+    <title>GoCode</title>
+</head>
+
+<body>
+    <!-- navigasi -->
+    <nav class="#00c853 green accent-4" role="navigation">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo">GoCode</a>
+            <a href="#" class="sidenav-trigger" data-target="nav-mobile"><i class="material-icons">menu</i></a>
+
+            <ul class="topnav right hide-on-med-and-down"></ul>
+            <ul class="sidenav" id="nav-mobile"></ul>
+        </div>
+    </nav>
+
+    <!-- akhir navigasi -->
+
+    <!-- Content -->
+    <div id="main-content"></div>
+    <!-- akhir content -->
+
+    <!-- Footer -->
+    <footer class="page-footer #616161 grey darken-2">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Headquarters</h5>
+                    <p class="grey-text text-lighten-4">Jalan Tebet Barat Dalam VIIIC, Jakarta Selatan, Indonesia</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Legal</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Terms of Service</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2020 PT GoCode Indonesia. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+    <!-- Akhir footer -->
+
+    <script src="js/materialize.min.js"></script>
+    <script src="js/link.js"></script>
+
+    <script>
+        // MENDAFTAR SERVICE WORKER
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", function () {
+                navigator.serviceWorker
+                    .register("/service-worker.js")
+                    .then(function () {
+                        console.log("Pendaftaran ServiceWorker berhasil");
+                    })
+                    .catch(function () {
+                        console.log("Pendaftaran ServiceWorker gagal");
+                    });
+            });
+        } else {
+            console.log("ServiceWorker belum didukung browser ini.");
+        }
+    </script>
+</body>
+
+</html>

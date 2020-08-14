@@ -1,0 +1,22 @@
+.lesson {
+    margin-bottom: 100px;
+}
+
+.lesson h3 {
+    border-bottom: 2px solid rgb(168, 168, 168);
+    padding: 15px 0;
+    width: 33.3%;
+    margin: 40px auto;
+}
+
+.lesson img {
+    width: 120px;
+    height: 140px;
+}
+
+.login,
+.register,
+.contact {
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
