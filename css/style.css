@@ -4,7 +4,7 @@
 
 .lesson h3 {
     border-bottom: 2px solid rgb(168, 168, 168);
-    padding: 15px 0;
+    padding: 10px 0;
     width: 33.3%;
     margin: 40px auto;
 }
@@ -19,4 +19,13 @@
 .contact {
     margin-top: 80px;
     margin-bottom: 100px;
+}
+
+/* Responsive */
+
+@media(max-width: 560px) {
+    .lesson h3 {
+        width: 80%;
+        font-size: 35px;
+    }
 }
